@@ -18,7 +18,7 @@ const call_for_data = ()=>{
  
 
     console.log(loc);
-    fetch('/', {
+    fetch('/api', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
