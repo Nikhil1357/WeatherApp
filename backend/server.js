@@ -3,10 +3,11 @@ const API = "af070d581b96ea157ba00a5232448822"
 const bp = require('body-parser');
 const express = require('express');
 const app = express();
-const cors = require('cors');
-app.use(cors())
+const helmet = require('helmet')
+// const cors = require('cors');
+// app.use(cors())
 app.use(bp.json());
-
+app.use(helmet())
 
 app.post('/',(req, res)=>{
 
@@ -44,6 +45,6 @@ app.post('/',(req, res)=>{
 })
 
 
-app.listen(8000,()=>{
-    console.log("Hi");
+app.listen(process.env.PORT || 8000,()=>{
+    console.log("Server Running");
 })
