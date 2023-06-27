@@ -15,10 +15,9 @@ function App() {
 const [response, set_response] = useState({main: 'Haze', desc: 'haze', feels_like: 302.71, temp: 300.34, humidity: 74});
 
 const call_for_data = ()=>{
- 
 
     console.log(loc);
-    fetch('/api', {
+    fetch('/', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
